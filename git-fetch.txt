@@ -1,0 +1,12 @@
+If there is any nw commit made in a branch of a remote repo then we can use git fetch command to integrate that commit
+-- into our local git repo.
+git fetch 
+
+--git fetch commands only brings files and changes to local git directory. If we want to bring those changes, commits or
+-- updates to our local workign directory we need to use git merge command
+git merge
+
+Note: We can also use git pull to bring up new changes to out local directory and local git repo
+
+git pull <remote connect name> <ranch-name>
+git pull origin master

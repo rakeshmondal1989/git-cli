@@ -1,0 +1,30 @@
+Commands for copying specific branch or all branches into local working directory
+-- First create a directory where all the files locally generated and supposed to be imported from remote repositories.
+-- Following commands can be used to start from the scratch
+-- Please note that we don't need to initialize our current local working directory with git init command for cloning task.
+
+
+cd <your directory>
+git clone <specify the url of the remote github repo>
+git clone https://github.com/rakeshmondal1989/python-DSA.git
+
+-- Now if we want to execute git commands subsequently on the cloned repo then we must initialze our current local directory with
+--git init command
+git init
+-- By default it would be on master branch. 
+-- We must go into the remote repo directory in order find and the branches and corresponding files in them
+cd <remote repo name>
+cd python-DSA
+-- Once we are into remote directory which is "python-DSA" in our case, the branch will automatically be switched to main branch 
+--We can use following command for seeing which all <other> branches are there inside the remote repo
+git fetch --all
+git branch --all
+--It would show all the branchs we have in our remote repo and move or switch to a specific branch with the below command
+git switch <specific branch>
+git switch master
+-- Then in order to copy all the files of remote master branch we can use git pull command
+git pull origin master
+ls (It would show all the files of remote master branch)
+
+-- The command below brings up history of commits done on a specific branch
+git log --oneline
